@@ -24,6 +24,7 @@ Smart Lock topic model:
 
      
 ################################################ 
+
 Tips about using MAC computer as MQTT broker:
   1. install Homebrew: "/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   2. install Mosquitto: "brew install mosquitto"
