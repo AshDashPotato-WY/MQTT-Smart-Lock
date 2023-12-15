@@ -36,3 +36,12 @@ If Mosquitto isn't stopped properly last time, then the error will show port 188
 Solution:
   1. get PID of running process: ps ax | grep mosq
   2. kill the process: sudo kill -9 PID
+
+Testing server and clients on different devices:
+  1. add lines in configuration file:
+        allow_anonymous true
+        listener 1883 0.0.0.0
+  2. restart Mosquitto :
+       sudo service mosquitto restart
+     or
+       mosquitto --verbose --config-file /etc/mosquitto/conf.d/mosquitto.conf
