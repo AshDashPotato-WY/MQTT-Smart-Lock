@@ -29,5 +29,10 @@ Tips about using MAC computer as MQTT broker:
   1. install Homebrew: "/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
   2. install Mosquitto: "brew install mosquitto"
   3. start Mosquitto: "/usr/local/opt/mosquitto/sbin/mosquitto -c /usr/local/etc/mosquitto/mosquitto.conf"
-  4. unstall Mosquitto: "brew uninstall moquitto"
+  4. stop Mosquitto: command key + dot key
+  5. unstall Mosquitto: "brew uninstall moquitto"
 
+If Mosquitto isn't stopped properly last time, then the error will show port 1883 is in use when the server starts again.
+Solution:
+  1. get PID of running process: ps ax | grep mosq
+  2. kill the process: sudo kill -9 PID
